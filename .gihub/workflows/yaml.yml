@@ -1,0 +1,16 @@
+name: Print Node.js Version
+
+on: [push]
+
+jobs:
+  print-node-version:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    
+    - name: Print Node.js Version
+      run: node -v
